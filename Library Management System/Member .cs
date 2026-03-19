@@ -10,7 +10,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace Library_Management_System
 {
 
-    abstract class Member
+   public abstract class Member
     {
         public int Id;
         public string Name;

@@ -6,9 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Net.WebRequestMethods;
 
+
 namespace Library_Management_System
 {
-    internal class Book
+    public class Book
     {
         public int Id;
         public string Title;
