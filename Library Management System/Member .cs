@@ -7,13 +7,26 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Library_Management_System
 {
-    internal class Member:book
+
+    abstract class Member
     {
         public int id;
         public string name;
         public int phone;
-        string[] borrowedBooks = new string[2];
+       public Book[] borrowedBooks = new Book[2];
 
+        public void BorrowBook(Book book)
+        {
+
+        }
+
+
+        public void ReturnBook(Book book)
+        {
+
+        }
+
+        public abstract int GetMaxBorrowLimit();
 
 
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library_Management_System
 {
-    internal class book
+    internal class Book
     {
         public int id;
         public string title;
