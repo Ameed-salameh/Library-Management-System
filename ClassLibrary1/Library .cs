@@ -14,6 +14,13 @@ namespace ClassLibrary1
         int memberIndex = 0;
         int transactionIndex = 0;
 
+
+        public Library(int maxBooks, int maxMembers, int maxTransactions)
+        {
+            Books = new Book[maxBooks];
+            Members = new Member[maxMembers];
+            Transactions = new Transaction[maxTransactions];
+        }
         public void AddBook(Book book)
         {
             Books[bookIndex++] = book;

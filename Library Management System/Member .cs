@@ -14,11 +14,11 @@ namespace Library_Management_System
     {
         public int Id;
         public string Name;
-        public int Phone;
+        public string Phone;
        public Book[] BorrowedBooks = new Book[10];
         int BorrowIndex ;
 
-        public Member(int id, string name, int phone)
+        public Member(int id, string name, string phone)
         {
             Id = id;
             Name = name;

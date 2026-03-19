@@ -10,7 +10,7 @@ namespace Library_Management_System
     {
 
 
-        public TeacherMember(int id, string name, int phone) : base(id, name, phone)
+        public TeacherMember(int id, string name, string phone) : base(id, name, phone)
         {
 
         }

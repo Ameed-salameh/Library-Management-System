@@ -11,7 +11,7 @@ namespace Library_Management_System
 
 
 
-        public StudentMember(int id, string name, int phone) : base(id, name, phone)
+        public StudentMember(int id, string name, string phone) : base(id, name, phone)
         { 
         }
         public override int GetMaxBorrowLimit()
