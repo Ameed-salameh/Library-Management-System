@@ -13,17 +13,37 @@ namespace Library_Management_System
         public int id;
         public string name;
         public int phone;
-       public Book[] borrowedBooks = new Book[2];
-
+       public Book[] borrowedBooks = new Book[20];
+        int BorrowIndex = 0;
         public void BorrowBook(Book book)
         {
 
+            if (BorrowIndex < GetMaxBorrowLimit() && book.IsBorrowed==false)
+            {
+                borrowedBooks[BorrowIndex] = book;
+                BorrowIndex++;
+                book.IsBorrowed = true;
+            }
+            else
+            {
+                Console.WriteLine("Borrow  max limit ");
+            }
         }
+
+            
 
 
         public void ReturnBook(Book book)
         {
-
+            for (int i = 0; i < BorrowIndex; i++)
+            {
+                if (book == borrowedBooks[i])
+                {
+                    borrowedBooks[i] = null;
+                    BorrowIndex--;
+                    book.IsBorrowed = false;
+                }
+            }
         }
 
         public abstract int GetMaxBorrowLimit();

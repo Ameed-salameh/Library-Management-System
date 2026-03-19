@@ -12,7 +12,7 @@ namespace Library_Management_System
         public string title;
         public string author;
         public double price;
-        public string IsBorrowed;
+        public bool IsBorrowed;
 
 
 
