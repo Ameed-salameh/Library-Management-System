@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Library_Management_System
@@ -10,17 +12,29 @@ namespace Library_Management_System
 
     abstract class Member
     {
-        public int id;
-        public string name;
-        public int phone;
-       public Book[] borrowedBooks = new Book[20];
-        int BorrowIndex = 0;
+        public int Id;
+        public string Name;
+        public int Phone;
+       public Book[] BorrowedBooks = new Book[10];
+        int BorrowIndex ;
+
+        public Member(int id, string name, int phone)
+        {
+            Id = id;
+            Name = name;
+            Phone = phone;
+            BorrowedBooks = new Book[10]; 
+            BorrowIndex = 0;
+        }
+
+
+
         public void BorrowBook(Book book)
         {
 
             if (BorrowIndex < GetMaxBorrowLimit() && book.IsBorrowed==false)
             {
-                borrowedBooks[BorrowIndex] = book;
+                BorrowedBooks[BorrowIndex] = book;
                 BorrowIndex++;
                 book.IsBorrowed = true;
             }
@@ -37,9 +51,9 @@ namespace Library_Management_System
         {
             for (int i = 0; i < BorrowIndex; i++)
             {
-                if (book == borrowedBooks[i])
+                if (book == BorrowedBooks[i])
                 {
-                    borrowedBooks[i] = null;
+                    BorrowedBooks[i] = null;
                     BorrowIndex--;
                     book.IsBorrowed = false;
                 }

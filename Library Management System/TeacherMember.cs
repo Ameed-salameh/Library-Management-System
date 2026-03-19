@@ -10,5 +10,15 @@ namespace Library_Management_System
     {
 
 
+        public TeacherMember(int id, string name, int phone) : base(id, name, phone)
+        {
+
+        }
+        public override int GetMaxBorrowLimit()
+        {
+            return 5;
+        }
+
+
     }
 }
