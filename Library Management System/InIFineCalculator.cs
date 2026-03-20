@@ -9,6 +9,5 @@ namespace Library_Management_System
     internal interface InIFineCalculator
     {
         double CalculateFine(int daysLate);
-
     }
 }
