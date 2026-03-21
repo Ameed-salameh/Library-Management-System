@@ -19,6 +19,6 @@ namespace ClassLibrary1
             return 5;
         }
 
-
+        public override double CalculateFine(int daysLate) => daysLate * 0.5;
     }
 }
