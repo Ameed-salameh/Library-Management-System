@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using static System.Net.WebRequestMethods;
 
 
-namespace Library_Management_System
+namespace ClassLibrary1
 {
     public class Book
     {

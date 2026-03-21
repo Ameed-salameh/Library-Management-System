@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library_Management_System
+namespace ClassLibrary1
 {
 
     enum TransactionType
@@ -14,7 +14,7 @@ namespace Library_Management_System
     }
 
 
-    internal class Transaction
+    public class Transaction
     {
         public int Id;
         public string BookTitle;

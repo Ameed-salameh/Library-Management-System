@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library_Management_System
+namespace ClassLibrary1
 {
     internal interface InIFineCalculator
     {
