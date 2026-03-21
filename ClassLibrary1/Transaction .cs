@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ClassLibrary1
 {
 
-    enum TransactionType
+    public enum TransactionType
     {
         Borrow,
         Return
@@ -32,7 +32,10 @@ namespace ClassLibrary1
             Date = DateTime.Now; 
         }
 
-
+        public void Display()
+        {
+            Console.WriteLine($"ID:{Id}, Book:{BookTitle}, Member:{MemberName}, Date:{Date}, Type:{Type}");
+        }
 
     }
 }

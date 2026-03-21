@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    internal interface InIFineCalculator
+    public interface IFineCalculator
     {
         double CalculateFine(int daysLate);
     }

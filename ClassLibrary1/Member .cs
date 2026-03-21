@@ -10,7 +10,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace ClassLibrary1
 {
 
-    public abstract class Member
+    public abstract class Member : IFineCalculator
     {
         public int Id;
         public string Name;
@@ -60,6 +60,7 @@ namespace ClassLibrary1
             }
         }
         public abstract int GetMaxBorrowLimit();
+        public abstract double CalculateFine(int daysLate);
 
 
     }
